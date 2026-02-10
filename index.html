@@ -1,0 +1,731 @@
+```html
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIENAMARGOS — Mates premium</title>
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <meta name="description" content="BIENAMARGOS — tienda premium de mates. Mates, termos, yerbas, bombillas y accesorios para el ritual bien amargo." />
+  <meta name="theme-color" content="#0b1f15" />
+
+  <style>
+    /* Scroll suave para anclas */
+    html { scroll-behavior: smooth; }
+    /* Evita que el navbar tape el ancla */
+    section { scroll-margin-top: 88px; }
+  </style>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: "#0b1f15",     // verde bosque profundo
+            emeraldD: "#0f3d2e",   // esmeralda oscuro
+            olive: "#6b7a3a",      // oliva
+            cream: "#f4f0e6",      // blanco crema
+            matte: "#0b0b0c"       // negro mate
+          },
+          boxShadow: {
+            soft: "0 10px 30px rgba(0,0,0,.25)",
+            glow: "0 10px 25px rgba(16,185,129,.18)"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-forest text-cream antialiased">
+  <!-- Decorative background -->
+  <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-40 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-emeraldD/35 blur-3xl"></div>
+    <div class="absolute top-24 -right-24 h-[420px] w-[420px] rounded-full bg-olive/25 blur-3xl"></div>
+    <div class="absolute bottom-0 left-0 h-[420px] w-[420px] rounded-full bg-black/35 blur-3xl"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(244,240,230,0.08),transparent_55%)]"></div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="sticky top-0 z-50 border-b border-cream/10 bg-forest/70 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#inicio" class="group inline-flex items-center gap-3">
+        <div class="grid h-10 w-10 place-items-center rounded-xl bg-cream/10 ring-1 ring-cream/15 shadow-soft">
+          <i data-lucide="leaf" class="h-5 w-5 text-cream group-hover:text-white transition-colors"></i>
+        </div>
+        <div class="leading-tight">
+          <p class="text-sm tracking-[0.25em] text-cream/70">TIENDA PREMIUM</p>
+          <h1 class="text-lg font-semibold tracking-widest">BIENAMARGOS</h1>
+        </div>
+      </a>
+
+      <div class="hidden items-center gap-8 md:flex">
+        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#categorias">Categorías</a>
+        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#destacados">Destacados</a>
+        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#nosotros">Nosotros</a>
+        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#contacto">Contacto</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <button
+          id="cartBtn"
+          class="relative inline-flex items-center justify-center rounded-xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 hover:bg-cream/15 transition-all shadow-soft"
+          aria-label="Ver carrito"
+        >
+          <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+          <span id="cartCount" class="absolute -right-2 -top-2 grid h-5 w-5 place-items-center rounded-full bg-olive text-matte text-xs font-bold">0</span>
+        </button>
+
+        <button
+          id="mobileMenuBtn"
+          class="md:hidden inline-flex items-center justify-center rounded-xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 hover:bg-cream/15 transition-all shadow-soft"
+          aria-label="Abrir menú"
+        >
+          <i data-lucide="menu" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-cream/10 bg-forest/85 backdrop-blur">
+      <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-2">
+          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#categorias">Categorías</a>
+          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#destacados">Destacados</a>
+          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#nosotros">Nosotros</a>
+          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="inicio">
+    <section class="relative overflow-hidden">
+      <!-- Background image -->
+      <div class="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=2400&q=80"
+          alt="Ritual del mate"
+          class="h-full w-full object-cover opacity-70"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-forest/70 via-forest/65 to-forest"></div>
+      </div>
+
+      <div class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8 lg:py-28">
+        <div class="grid items-center gap-12 lg:grid-cols-2">
+          <div>
+            <p class="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 text-sm text-cream/85 ring-1 ring-cream/15 shadow-soft">
+              <i data-lucide="sparkles" class="h-4 w-4"></i>
+              El ritual premium, bien amargo
+            </p>
+
+            <h2 class="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Mates que elevan
+              <span class="block text-cream/90">cada cebada.</span>
+            </h2>
+
+            <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg">
+              Diseños elegantes, materiales nobles y detalles que importan. Armá tu set ideal:
+              mate, termo, yerba y accesorios — todo con personalidad, para un amargo perfecto.
+            </p>
+
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#destacados"
+                class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold shadow-glow hover:shadow-soft hover:-translate-y-0.5 transition-all"
+              >
+                Ver destacados
+                <i data-lucide="arrow-right" class="h-5 w-5"></i>
+              </a>
+
+              <a
+                href="#categorias"
+                class="inline-flex items-center justify-center gap-2 rounded-xl bg-transparent px-5 py-3 text-cream font-semibold ring-1 ring-cream/25 hover:bg-cream/10 transition-all"
+              >
+                Explorar categorías
+                <i data-lucide="grid-2x2" class="h-5 w-5"></i>
+              </a>
+            </div>
+
+            <div class="mt-10 grid grid-cols-3 gap-3 max-w-xl">
+              <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
+                <p class="text-xs text-cream/70">Envíos</p>
+                <p class="mt-1 font-semibold">Rápidos & seguros</p>
+              </div>
+              <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
+                <p class="text-xs text-cream/70">Calidad</p>
+                <p class="mt-1 font-semibold">Premium real</p>
+              </div>
+              <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
+                <p class="text-xs text-cream/70">Atención</p>
+                <p class="mt-1 font-semibold">Personalizada</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero card -->
+          <div class="relative">
+            <div class="rounded-3xl bg-matte/55 ring-1 ring-cream/10 shadow-soft overflow-hidden">
+              <div class="p-6 sm:p-8">
+                <div class="flex items-start justify-between gap-6">
+                  <div>
+                    <p class="text-sm text-cream/75">Colección destacada</p>
+                    <h3 class="mt-1 text-2xl font-semibold">Set Esmeralda</h3>
+                    <p class="mt-2 text-cream/75">
+                      Mate + bombilla premium + matera minimal. Hecho para el amargo sin vueltas.
+                    </p>
+                  </div>
+                  <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
+                    <i data-lucide="flame" class="h-6 w-6 text-cream"></i>
+                  </div>
+                </div>
+
+                <div class="mt-6 grid gap-3 sm:grid-cols-2">
+                  <div class="rounded-2xl bg-cream/5 p-4 ring-1 ring-cream/10">
+                    <p class="text-xs text-cream/70">Material</p>
+                    <p class="mt-1 font-semibold">Acero + cuero</p>
+                  </div>
+                  <div class="rounded-2xl bg-cream/5 p-4 ring-1 ring-cream/10">
+                    <p class="text-xs text-cream/70">Estilo</p>
+                    <p class="mt-1 font-semibold">Sobrio & moderno</p>
+                  </div>
+                </div>
+
+                <div class="mt-6 flex items-center justify-between gap-4">
+                  <div>
+                    <p class="text-xs text-cream/70">Desde</p>
+                    <p class="text-2xl font-semibold">$ 69.990</p>
+                  </div>
+                  <button
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                    data-add
+                    data-name="Set Esmeralda"
+                  >
+                    <i data-lucide="plus" class="h-5 w-5"></i>
+                    Agregar
+                  </button>
+                </div>
+              </div>
+
+              <div class="border-t border-cream/10 bg-forest/20 px-6 py-4 sm:px-8">
+                <p class="text-sm text-cream/75">
+                  Tip BIENAMARGOS: el amargo perfecto arranca en la temperatura justa y termina en detalles.
+                </p>
+              </div>
+            </div>
+
+            <div aria-hidden="true" class="absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-olive/25 blur-3xl"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Categorías -->
+    <section id="categorias" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between gap-6">
+        <div>
+          <h3 class="text-3xl font-semibold tracking-tight">Categorías premium</h3>
+          <p class="mt-2 max-w-2xl text-cream/75">
+            Elegí tu estilo: minimal, clásico o bien brutalista. Todo pensado para el ritual de todos los días.
+          </p>
+        </div>
+        <a href="#destacados" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-cream/80 hover:text-cream transition">
+          Ver productos
+          <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card helper: use images with consistent crop -->
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1602524205570-9c7d15b1b6ed?auto=format&fit=crop&w=1400&q=80" alt="Mates" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="cup-soda" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Mates</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Calabaza, acero, cerámica. El centro del ritual.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1526401485004-2aa7b5f8f7f3?auto=format&fit=crop&w=1400&q=80" alt="Termos" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="thermometer" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Termos</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Temperatura precisa para cebadas perfectas.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?auto=format&fit=crop&w=1400&q=80" alt="Yerbas" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="sprout" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Yerbas</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Selección intensa: sabor profundo, sin humo de más.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=1400&q=80" alt="Bombillas" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="filter" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Bombillas</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Acero quirúrgico, pico fino, flujo perfecto.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80" alt="Materas" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="briefcase" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Materas</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Cuero y lona premium: llevá el ritual con estilo.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+
+        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
+          <div class="relative h-44">
+            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
+              src="https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1400&q=80" alt="Accesorios" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
+            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
+              <i data-lucide="package" class="h-4 w-4"></i>
+              <span class="text-sm font-semibold">Accesorios</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <p class="text-cream/75">Tapas, cepillos, repuestos y detalles que suman.</p>
+            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
+              Ver más
+              <i data-lucide="arrow-right" class="h-4 w-4"></i>
+            </button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Destacados -->
+    <section id="destacados" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <h3 class="text-3xl font-semibold tracking-tight">Productos destacados</h3>
+          <p class="mt-2 max-w-2xl text-cream/75">
+            Cuatro piezas clave para armar un set BIENAMARGOS: sobrio, elegante y hecho para durar.
+          </p>
+        </div>
+
+        <!-- simple "carousel" controls (scroll) -->
+        <div class="flex items-center gap-2">
+          <button id="prevBtn" class="rounded-xl bg-cream/10 p-3 ring-1 ring-cream/15 hover:bg-cream/15 transition" aria-label="Anterior">
+            <i data-lucide="chevron-left" class="h-5 w-5"></i>
+          </button>
+          <button id="nextBtn" class="rounded-xl bg-cream/10 p-3 ring-1 ring-cream/15 hover:bg-cream/15 transition" aria-label="Siguiente">
+            <i data-lucide="chevron-right" class="h-5 w-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Horizontal scroll "carousel" -->
+      <div id="carousel" class="mt-10 flex gap-6 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+        <!-- Product card template -->
+        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
+          <div class="relative h-48">
+            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" alt="Mate Imperial" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            <span class="absolute left-4 top-4 rounded-full bg-olive/25 px-3 py-1 text-xs font-bold ring-1 ring-olive/40">TOP</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Mate Imperial Bosque</h4>
+            <p class="mt-2 text-cream/75">Acabado premium, agarre perfecto y estética sobria.</p>
+            <div class="mt-5 flex items-center justify-between">
+              <p class="text-lg font-semibold">$ 34.990</p>
+              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                data-add data-name="Mate Imperial Bosque">
+                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
+          <div class="relative h-48">
+            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1520975958225-bc2d3bbf5c56?auto=format&fit=crop&w=1400&q=80" alt="Termo Acero" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            <span class="absolute left-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">NUEVO</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Termo Esmeralda 1L</h4>
+            <p class="mt-2 text-cream/75">Mantiene la temperatura por horas. Pico cebador.</p>
+            <div class="mt-5 flex items-center justify-between">
+              <p class="text-lg font-semibold">$ 59.990</p>
+              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                data-add data-name="Termo Esmeralda 1L">
+                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
+          <div class="relative h-48">
+            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1400&q=80" alt="Yerba" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            <span class="absolute left-4 top-4 rounded-full bg-olive/25 px-3 py-1 text-xs font-bold ring-1 ring-olive/40">INTENSA</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Yerba Selección Amarga</h4>
+            <p class="mt-2 text-cream/75">Perfil robusto, amargor elegante y duradero.</p>
+            <div class="mt-5 flex items-center justify-between">
+              <p class="text-lg font-semibold">$ 7.990</p>
+              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                data-add data-name="Yerba Selección Amarga">
+                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
+          <div class="relative h-48">
+            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1520975693411-cd51f4ddf5c6?auto=format&fit=crop&w=1400&q=80" alt="Bombilla" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            <span class="absolute left-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">CLÁSICA</span>
+          </div>
+          <div class="p-6">
+            <h4 class="text-xl font-semibold">Bombilla Acero Fino</h4>
+            <p class="mt-2 text-cream/75">Filtro eficiente, sorbo cómodo, cero vueltas.</p>
+            <div class="mt-5 flex items-center justify-between">
+              <p class="text-lg font-semibold">$ 11.990</p>
+              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                data-add data-name="Bombilla Acero Fino">
+                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="mt-10 grid gap-4 rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 sm:grid-cols-3">
+        <div class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
+            <i data-lucide="shield-check" class="h-5 w-5"></i>
+          </div>
+          <div>
+            <p class="text-sm text-cream/75">Compra segura</p>
+            <p class="font-semibold">Protección & confianza</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
+            <i data-lucide="truck" class="h-5 w-5"></i>
+          </div>
+          <div>
+            <p class="text-sm text-cream/75">Envío premium</p>
+            <p class="font-semibold">A todo el país</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
+            <i data-lucide="badge-check" class="h-5 w-5"></i>
+          </div>
+          <div>
+            <p class="text-sm text-cream/75">Calidad</p>
+            <p class="font-semibold">Materiales nobles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
+        <div class="rounded-3xl bg-cream/5 p-8 ring-1 ring-cream/10 shadow-soft">
+          <p class="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 text-sm text-cream/85 ring-1 ring-cream/15">
+            <i data-lucide="heart" class="h-4 w-4"></i>
+            Sobre BIENAMARGOS
+          </p>
+
+          <h3 class="mt-6 text-3xl font-semibold tracking-tight">
+            Pasión por el mate, <span class="text-cream/90">bien amargo.</span>
+          </h3>
+
+          <p class="mt-4 text-cream/75 leading-relaxed">
+            Creemos que el mate no es solo una bebida: es pausa, charla y carácter.
+            En BIENAMARGOS seleccionamos piezas premium con diseño sobrio y materiales que envejecen bien.
+            Para quienes disfrutan el ritual sin azúcar, sin apuro y con estilo.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
+              <i data-lucide="gem" class="h-4 w-4"></i> Premium
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
+              <i data-lucide="palette" class="h-4 w-4"></i> Diseño
+            </span>
+            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
+              <i data-lucide="sparkle" class="h-4 w-4"></i> Detalles
+            </span>
+          </div>
+        </div>
+
+        <div class="relative overflow-hidden rounded-3xl ring-1 ring-cream/10 shadow-soft">
+          <img
+            class="h-full w-full object-cover"
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2400&q=80"
+            alt="Mesa y ritual"
+          />
+          <div class="absolute inset-0 bg-gradient-to-tr from-forest/85 via-forest/30 to-transparent"></div>
+
+          <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
+            <div class="rounded-2xl bg-matte/55 p-5 ring-1 ring-cream/10 backdrop-blur">
+              <p class="text-sm text-cream/75">Manifiesto</p>
+              <p class="mt-1 text-lg font-semibold">
+                “Amargo, como debe ser. Elegante, como te gusta.”
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="border-t border-cream/10 bg-forest/70">
+      <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-12">
+          <div class="lg:col-span-4">
+            <div class="flex items-center gap-3">
+              <div class="grid h-10 w-10 place-items-center rounded-xl bg-cream/10 ring-1 ring-cream/15 shadow-soft">
+                <i data-lucide="leaf" class="h-5 w-5"></i>
+              </div>
+              <div>
+                <p class="text-xs tracking-[0.25em] text-cream/70">TIENDA PREMIUM</p>
+                <p class="text-lg font-semibold tracking-widest">BIENAMARGOS</p>
+              </div>
+            </div>
+            <p class="mt-4 text-cream/75 max-w-md">
+              Mates, termos y accesorios premium para un ritual auténtico. Diseño sobrio, calidad real.
+            </p>
+
+            <div class="mt-6 flex items-center gap-3">
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
+                href="#" aria-label="Instagram">
+                <i data-lucide="instagram" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
+              </a>
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
+                href="#" aria-label="TikTok">
+                <i data-lucide="music-2" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
+              </a>
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
+                href="#" aria-label="WhatsApp">
+                <i data-lucide="message-circle" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-3">
+            <h4 class="text-sm font-semibold tracking-widest text-cream/90">LINKS</h4>
+            <ul class="mt-4 space-y-2 text-cream/75">
+              <li><a class="hover:text-cream transition" href="#inicio">Inicio</a></li>
+              <li><a class="hover:text-cream transition" href="#categorias">Categorías</a></li>
+              <li><a class="hover:text-cream transition" href="#destacados">Destacados</a></li>
+              <li><a class="hover:text-cream transition" href="#nosotros">Nosotros</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-5">
+            <div class="grid gap-8 sm:grid-cols-2">
+              <div>
+                <h4 class="text-sm font-semibold tracking-widest text-cream/90">CONTACTO</h4>
+                <ul class="mt-4 space-y-3 text-cream/75">
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="mail" class="h-5 w-5 text-cream/80"></i>
+                    <span>hola@bienamargos.com</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="phone" class="h-5 w-5 text-cream/80"></i>
+                    <span>+54 11 0000-0000</span>
+                  </li>
+                  <li class="flex items-center gap-3">
+                    <i data-lucide="map-pin" class="h-5 w-5 text-cream/80"></i>
+                    <span>Argentina</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h4 class="text-sm font-semibold tracking-widest text-cream/90">NEWSLETTER</h4>
+                <p class="mt-4 text-cream/75">
+                  Promos, lanzamientos y tips para un amargo perfecto.
+                </p>
+
+                <form class="mt-4 flex flex-col gap-3 sm:flex-row" onsubmit="event.preventDefault(); toast('¡Listo! Te suscribiste al newsletter.');">
+                  <label class="sr-only" for="email">Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    required
+                    placeholder="Tu email"
+                    class="w-full rounded-xl bg-cream/10 px-4 py-3 text-cream placeholder:text-cream/50 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60"
+                  />
+                  <button
+                    type="submit"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
+                  >
+                    Suscribirme
+                    <i data-lucide="send" class="h-5 w-5"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 flex flex-col gap-3 border-t border-cream/10 pt-8 text-sm text-cream/60 sm:flex-row sm:items-center sm:justify-between">
+          <p>© <span id="year"></span> BIENAMARGOS. Todos los derechos reservados.</p>
+          <p class="flex items-center gap-2">
+            <i data-lucide="coffee" class="h-4 w-4"></i>
+            Hecho para el ritual bien amargo.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Toast -->
+  <div id="toast"
+    class="fixed bottom-5 left-1/2 z-[60] hidden -translate-x-1/2 rounded-2xl bg-matte/70 px-5 py-3 text-cream ring-1 ring-cream/10 backdrop-blur shadow-soft">
+    <div class="flex items-center gap-3">
+      <i data-lucide="check-circle-2" class="h-5 w-5 text-cream"></i>
+      <p id="toastText" class="text-sm font-medium">Listo</p>
+    </div>
+  </div>
+
+  <script>
+    // Init icons
+    lucide.createIcons();
+
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn?.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    // close menu on link click
+    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple cart counter (UI demo)
+    let cart = 0;
+    const cartCount = document.getElementById('cartCount');
+    document.querySelectorAll('[data-add]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        cart++;
+        cartCount.textContent = String(cart);
+        const name = btn.getAttribute('data-name') || 'Producto';
+        toast(`Agregado: ${name} (x${cart})`);
+      });
+    });
+
+    // Carousel scroll controls
+    const carousel = document.getElementById('carousel');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const scrollBy = () => Math.min(420, Math.max(320, Math.floor(window.innerWidth * 0.65)));
+
+    nextBtn?.addEventListener('click', () => {
+      carousel.scrollBy({ left: scrollBy(), behavior: 'smooth' });
+    });
+    prevBtn?.addEventListener('click', () => {
+      carousel.scrollBy({ left: -scrollBy(), behavior: 'smooth' });
+    });
+
+    // Cart click (demo)
+    document.getElementById('cartBtn')?.addEventListener('click', () => {
+      toast(`Carrito: ${cart} item${cart === 1 ? '' : 's'}`);
+    });
+
+    // Toast helper
+    let toastTimer = null;
+    function toast(message) {
+      const el = document.getElementById('toast');
+      const text = document.getElementById('toastText');
+      text.textContent = message;
+      el.classList.remove('hidden');
+      el.classList.add('animate-[fadeIn_.18s_ease-out]');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        el.classList.add('hidden');
+        el.classList.remove('animate-[fadeIn_.18s_ease-out]');
+      }, 2200);
+    }
+  </script>
+
+  <!-- Tiny animation keyframes (Tailwind doesn't ship custom keyframes via CDN by default) -->
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translate(-50%, 6px); }
+      to   { opacity: 1; transform: translate(-50%, 0); }
+    }
+  </style>
+</body>
+</html>
+```
