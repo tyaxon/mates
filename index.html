@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="es">
 <head>
@@ -12,14 +11,12 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <meta name="description" content="BIENAMARGOS — tienda premium de mates. Mates, termos, yerbas, bombillas y accesorios para el ritual bien amargo." />
+  <meta name="description" content="BIENAMARGOS — tienda premium de mates. Mates, termos, yerbas, bombillas, materas y accesorios." />
   <meta name="theme-color" content="#0b1f15" />
 
   <style>
-    /* Scroll suave para anclas */
     html { scroll-behavior: smooth; }
-    /* Evita que el navbar tape el ancla */
-    section { scroll-margin-top: 88px; }
+    section { scroll-margin-top: 92px; }
   </style>
 
   <script>
@@ -27,11 +24,11 @@
       theme: {
         extend: {
           colors: {
-            forest: "#0b1f15",     // verde bosque profundo
-            emeraldD: "#0f3d2e",   // esmeralda oscuro
-            olive: "#6b7a3a",      // oliva
-            cream: "#f4f0e6",      // blanco crema
-            matte: "#0b0b0c"       // negro mate
+            forest: "#0b1f15",
+            emeraldD: "#0f3d2e",
+            olive: "#6b7a3a",
+            cream: "#f4f0e6",
+            matte: "#0b0b0c"
           },
           boxShadow: {
             soft: "0 10px 30px rgba(0,0,0,.25)",
@@ -66,8 +63,8 @@
       </a>
 
       <div class="hidden items-center gap-8 md:flex">
+        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#tienda">Tienda</a>
         <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#categorias">Categorías</a>
-        <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#destacados">Destacados</a>
         <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#nosotros">Nosotros</a>
         <a class="text-sm text-cream/80 hover:text-cream transition-colors" href="#contacto">Contacto</a>
       </div>
@@ -96,8 +93,8 @@
     <div id="mobileMenu" class="md:hidden hidden border-t border-cream/10 bg-forest/85 backdrop-blur">
       <div class="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div class="flex flex-col gap-2">
+          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#tienda">Tienda</a>
           <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#categorias">Categorías</a>
-          <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#destacados">Destacados</a>
           <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#nosotros">Nosotros</a>
           <a class="rounded-lg px-3 py-2 text-cream/80 hover:text-cream hover:bg-cream/10 transition" href="#contacto">Contacto</a>
         </div>
@@ -105,10 +102,9 @@
     </div>
   </header>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <main id="inicio">
     <section class="relative overflow-hidden">
-      <!-- Background image -->
       <div class="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=2400&q=80"
@@ -127,21 +123,20 @@
             </p>
 
             <h2 class="mt-6 text-4xl font-semibold tracking-tight sm:text-5xl">
-              Mates que elevan
-              <span class="block text-cream/90">cada cebada.</span>
+              La tienda para quienes
+              <span class="block text-cream/90">toman mate con carácter.</span>
             </h2>
 
             <p class="mt-5 max-w-xl text-base leading-relaxed text-cream/80 sm:text-lg">
-              Diseños elegantes, materiales nobles y detalles que importan. Armá tu set ideal:
-              mate, termo, yerba y accesorios — todo con personalidad, para un amargo perfecto.
+              Selección premium, diseño sobrio y materiales nobles. Armá tu set ideal en minutos y cerrá el pedido por WhatsApp.
             </p>
 
             <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <a
-                href="#destacados"
+                href="#tienda"
                 class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold shadow-glow hover:shadow-soft hover:-translate-y-0.5 transition-all"
               >
-                Ver destacados
+                Ir a la tienda
                 <i data-lucide="arrow-right" class="h-5 w-5"></i>
               </a>
 
@@ -149,34 +144,33 @@
                 href="#categorias"
                 class="inline-flex items-center justify-center gap-2 rounded-xl bg-transparent px-5 py-3 text-cream font-semibold ring-1 ring-cream/25 hover:bg-cream/10 transition-all"
               >
-                Explorar categorías
+                Ver categorías
                 <i data-lucide="grid-2x2" class="h-5 w-5"></i>
               </a>
             </div>
 
             <div class="mt-10 grid grid-cols-3 gap-3 max-w-xl">
               <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
-                <p class="text-xs text-cream/70">Envíos</p>
-                <p class="mt-1 font-semibold">Rápidos & seguros</p>
+                <p class="text-xs text-cream/70">Checkout</p>
+                <p class="mt-1 font-semibold">WhatsApp</p>
               </div>
               <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
-                <p class="text-xs text-cream/70">Calidad</p>
-                <p class="mt-1 font-semibold">Premium real</p>
+                <p class="text-xs text-cream/70">Catálogo</p>
+                <p class="mt-1 font-semibold">Premium</p>
               </div>
               <div class="rounded-2xl bg-cream/8 p-4 ring-1 ring-cream/10">
-                <p class="text-xs text-cream/70">Atención</p>
-                <p class="mt-1 font-semibold">Personalizada</p>
+                <p class="text-xs text-cream/70">UX</p>
+                <p class="mt-1 font-semibold">Rápida</p>
               </div>
             </div>
           </div>
 
-          <!-- Hero card -->
           <div class="relative">
             <div class="rounded-3xl bg-matte/55 ring-1 ring-cream/10 shadow-soft overflow-hidden">
               <div class="p-6 sm:p-8">
                 <div class="flex items-start justify-between gap-6">
                   <div>
-                    <p class="text-sm text-cream/75">Colección destacada</p>
+                    <p class="text-sm text-cream/75">Recomendado</p>
                     <h3 class="mt-1 text-2xl font-semibold">Set Esmeralda</h3>
                     <p class="mt-2 text-cream/75">
                       Mate + bombilla premium + matera minimal. Hecho para el amargo sin vueltas.
@@ -187,26 +181,14 @@
                   </div>
                 </div>
 
-                <div class="mt-6 grid gap-3 sm:grid-cols-2">
-                  <div class="rounded-2xl bg-cream/5 p-4 ring-1 ring-cream/10">
-                    <p class="text-xs text-cream/70">Material</p>
-                    <p class="mt-1 font-semibold">Acero + cuero</p>
-                  </div>
-                  <div class="rounded-2xl bg-cream/5 p-4 ring-1 ring-cream/10">
-                    <p class="text-xs text-cream/70">Estilo</p>
-                    <p class="mt-1 font-semibold">Sobrio & moderno</p>
-                  </div>
-                </div>
-
                 <div class="mt-6 flex items-center justify-between gap-4">
                   <div>
                     <p class="text-xs text-cream/70">Desde</p>
-                    <p class="text-2xl font-semibold">$ 69.990</p>
+                    <p class="text-2xl font-semibold">$ <span data-money="69990">69.990</span></p>
                   </div>
                   <button
                     class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                    data-add
-                    data-name="Set Esmeralda"
+                    data-add-id="set-esmeralda"
                   >
                     <i data-lucide="plus" class="h-5 w-5"></i>
                     Agregar
@@ -216,7 +198,7 @@
 
               <div class="border-t border-cream/10 bg-forest/20 px-6 py-4 sm:px-8">
                 <p class="text-sm text-cream/75">
-                  Tip BIENAMARGOS: el amargo perfecto arranca en la temperatura justa y termina en detalles.
+                  Tip: el amargo perfecto arranca en temperatura justa y termina en detalles.
                 </p>
               </div>
             </div>
@@ -227,273 +209,297 @@
       </div>
     </section>
 
-    <!-- Categorías -->
-    <section id="categorias" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- CATEGORÍAS (links a secciones) -->
+    <section id="categorias" class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
       <div class="flex items-end justify-between gap-6">
         <div>
-          <h3 class="text-3xl font-semibold tracking-tight">Categorías premium</h3>
+          <h3 class="text-3xl font-semibold tracking-tight">Categorías</h3>
           <p class="mt-2 max-w-2xl text-cream/75">
-            Elegí tu estilo: minimal, clásico o bien brutalista. Todo pensado para el ritual de todos los días.
+            Tocá una categoría para bajar a su sección y ver productos filtrados.
           </p>
         </div>
-        <a href="#destacados" class="hidden sm:inline-flex items-center gap-2 text-sm font-semibold text-cream/80 hover:text-cream transition">
-          Ver productos
-          <i data-lucide="chevron-right" class="h-4 w-4"></i>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Category pills -->
+        <a href="#cat-mates" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Mates</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="cup-soda" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Imperial, acero, cerámica y más.</p>
+        </a>
+
+        <a href="#cat-termos" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Termos</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="thermometer" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Temperatura precisa para cebadas perfectas.</p>
+        </a>
+
+        <a href="#cat-yerbas" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Yerbas</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="sprout" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Intensas, clásicas y blends.</p>
+        </a>
+
+        <a href="#cat-bombillas" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Bombillas</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="filter" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Acero premium, pico fino, buen flujo.</p>
+        </a>
+
+        <a href="#cat-materas" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Materas</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="briefcase" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Cuero/lona premium con estética minimal.</p>
+        </a>
+
+        <a href="#cat-accesorios" class="group rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 hover:ring-cream/20 hover:bg-cream/7 transition shadow-soft">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm text-cream/75">Sección</p>
+              <h4 class="mt-1 text-xl font-semibold">Accesorios</h4>
+            </div>
+            <div class="grid h-12 w-12 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/35">
+              <i data-lucide="package" class="h-6 w-6 group-hover:scale-110 transition-transform"></i>
+            </div>
+          </div>
+          <p class="mt-3 text-cream/75">Cepillos, tapas, repuestos y más.</p>
         </a>
       </div>
-
-      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Card helper: use images with consistent crop -->
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1602524205570-9c7d15b1b6ed?auto=format&fit=crop&w=1400&q=80" alt="Mates" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="cup-soda" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Mates</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Calabaza, acero, cerámica. El centro del ritual.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1526401485004-2aa7b5f8f7f3?auto=format&fit=crop&w=1400&q=80" alt="Termos" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="thermometer" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Termos</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Temperatura precisa para cebadas perfectas.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?auto=format&fit=crop&w=1400&q=80" alt="Yerbas" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="sprout" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Yerbas</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Selección intensa: sabor profundo, sin humo de más.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=1400&q=80" alt="Bombillas" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="filter" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Bombillas</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Acero quirúrgico, pico fino, flujo perfecto.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80" alt="Materas" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="briefcase" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Materas</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Cuero y lona premium: llevá el ritual con estilo.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="group overflow-hidden rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft hover:ring-cream/20 transition-all">
-          <div class="relative h-44">
-            <img class="h-full w-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
-              src="https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1400&q=80" alt="Accesorios" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-4 left-4 inline-flex items-center gap-2 rounded-full bg-forest/55 px-3 py-1.5 ring-1 ring-cream/10">
-              <i data-lucide="package" class="h-4 w-4"></i>
-              <span class="text-sm font-semibold">Accesorios</span>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-cream/75">Tapas, cepillos, repuestos y detalles que suman.</p>
-            <button class="mt-4 inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all">
-              Ver más
-              <i data-lucide="arrow-right" class="h-4 w-4"></i>
-            </button>
-          </div>
-        </article>
-      </div>
     </section>
 
-    <!-- Destacados -->
-    <section id="destacados" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+    <!-- TIENDA + FILTROS -->
+    <section id="tienda" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
       <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h3 class="text-3xl font-semibold tracking-tight">Productos destacados</h3>
+          <h3 class="text-3xl font-semibold tracking-tight">Tienda</h3>
           <p class="mt-2 max-w-2xl text-cream/75">
-            Cuatro piezas clave para armar un set BIENAMARGOS: sobrio, elegante y hecho para durar.
+            Filtrá rápido y agregá al carrito. El pedido se envía por WhatsApp con total y envío.
           </p>
         </div>
 
-        <!-- simple "carousel" controls (scroll) -->
-        <div class="flex items-center gap-2">
-          <button id="prevBtn" class="rounded-xl bg-cream/10 p-3 ring-1 ring-cream/15 hover:bg-cream/15 transition" aria-label="Anterior">
-            <i data-lucide="chevron-left" class="h-5 w-5"></i>
+        <div class="flex flex-wrap items-center gap-2">
+          <button id="resetFiltersBtn" class="inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 transition">
+            <i data-lucide="rotate-ccw" class="h-4 w-4"></i>
+            Reset
           </button>
-          <button id="nextBtn" class="rounded-xl bg-cream/10 p-3 ring-1 ring-cream/15 hover:bg-cream/15 transition" aria-label="Siguiente">
-            <i data-lucide="chevron-right" class="h-5 w-5"></i>
+          <button id="openFiltersMobile" class="sm:hidden inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2 text-sm font-semibold text-matte hover:-translate-y-0.5 transition shadow-glow">
+            <i data-lucide="sliders-horizontal" class="h-4 w-4"></i>
+            Filtros
           </button>
         </div>
       </div>
 
-      <!-- Horizontal scroll "carousel" -->
-      <div id="carousel" class="mt-10 flex gap-6 overflow-x-auto scroll-smooth pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-        <!-- Product card template -->
-        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
-          <div class="relative h-48">
-            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80" alt="Mate Imperial" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
-            <span class="absolute left-4 top-4 rounded-full bg-olive/25 px-3 py-1 text-xs font-bold ring-1 ring-olive/40">TOP</span>
+      <!-- Filters bar -->
+      <div class="mt-8 grid gap-4 rounded-3xl bg-cream/5 p-4 ring-1 ring-cream/10 shadow-soft sm:p-5 lg:grid-cols-12">
+        <!-- Search -->
+        <div class="lg:col-span-4">
+          <label class="text-xs font-semibold tracking-widest text-cream/70">BUSCAR</label>
+          <div class="mt-2 flex items-center gap-2 rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus-within:ring-2 focus-within:ring-olive/60">
+            <i data-lucide="search" class="h-4 w-4 text-cream/70"></i>
+            <input id="qInput" class="w-full bg-transparent text-cream placeholder:text-cream/50 focus:outline-none" placeholder="Ej: mate imperial, termo 1L..." />
           </div>
-          <div class="p-6">
-            <h4 class="text-xl font-semibold">Mate Imperial Bosque</h4>
-            <p class="mt-2 text-cream/75">Acabado premium, agarre perfecto y estética sobria.</p>
-            <div class="mt-5 flex items-center justify-between">
-              <p class="text-lg font-semibold">$ 34.990</p>
-              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                data-add data-name="Mate Imperial Bosque">
-                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
-              </button>
-            </div>
-          </div>
-        </article>
+        </div>
 
-        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
-          <div class="relative h-48">
-            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1520975958225-bc2d3bbf5c56?auto=format&fit=crop&w=1400&q=80" alt="Termo Acero" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
-            <span class="absolute left-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">NUEVO</span>
-          </div>
-          <div class="p-6">
-            <h4 class="text-xl font-semibold">Termo Esmeralda 1L</h4>
-            <p class="mt-2 text-cream/75">Mantiene la temperatura por horas. Pico cebador.</p>
-            <div class="mt-5 flex items-center justify-between">
-              <p class="text-lg font-semibold">$ 59.990</p>
-              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                data-add data-name="Termo Esmeralda 1L">
-                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
-              </button>
-            </div>
-          </div>
-        </article>
+        <!-- Category -->
+        <div class="lg:col-span-3">
+          <label class="text-xs font-semibold tracking-widest text-cream/70">CATEGORÍA</label>
+          <select id="catSelect" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60">
+            <option value="all">Todas</option>
+            <option value="mates">Mates</option>
+            <option value="termos">Termos</option>
+            <option value="yerbas">Yerbas</option>
+            <option value="bombillas">Bombillas</option>
+            <option value="materas">Materas</option>
+            <option value="accesorios">Accesorios</option>
+          </select>
+        </div>
 
-        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
-          <div class="relative h-48">
-            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1400&q=80" alt="Yerba" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
-            <span class="absolute left-4 top-4 rounded-full bg-olive/25 px-3 py-1 text-xs font-bold ring-1 ring-olive/40">INTENSA</span>
-          </div>
-          <div class="p-6">
-            <h4 class="text-xl font-semibold">Yerba Selección Amarga</h4>
-            <p class="mt-2 text-cream/75">Perfil robusto, amargor elegante y duradero.</p>
-            <div class="mt-5 flex items-center justify-between">
-              <p class="text-lg font-semibold">$ 7.990</p>
-              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                data-add data-name="Yerba Selección Amarga">
-                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
-              </button>
-            </div>
-          </div>
-        </article>
+        <!-- Sort -->
+        <div class="lg:col-span-3">
+          <label class="text-xs font-semibold tracking-widest text-cream/70">ORDENAR</label>
+          <select id="sortSelect" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60">
+            <option value="featured">Recomendados</option>
+            <option value="price-asc">Precio: menor a mayor</option>
+            <option value="price-desc">Precio: mayor a menor</option>
+            <option value="name-asc">Nombre: A → Z</option>
+          </select>
+        </div>
 
-        <article class="min-w-[280px] sm:min-w-[340px] flex-1 rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden">
-          <div class="relative h-48">
-            <img class="h-full w-full object-cover" src="https://images.unsplash.com/photo-1520975693411-cd51f4ddf5c6?auto=format&fit=crop&w=1400&q=80" alt="Bombilla" />
-            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
-            <span class="absolute left-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">CLÁSICA</span>
+        <!-- Stock + Price -->
+        <div class="lg:col-span-2">
+          <label class="text-xs font-semibold tracking-widest text-cream/70">FILTROS</label>
+          <div class="mt-2 flex flex-col gap-2">
+            <label class="inline-flex items-center gap-2 rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15">
+              <input id="inStockOnly" type="checkbox" class="h-4 w-4 accent-[#6b7a3a]" />
+              <span class="text-sm text-cream/85">Solo stock</span>
+            </label>
+            <button id="priceBtn" class="inline-flex items-center justify-between rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 hover:bg-cream/15 transition">
+              <span class="text-sm text-cream/85">Rango precio</span>
+              <i data-lucide="chevron-down" class="h-4 w-4 text-cream/70"></i>
+            </button>
           </div>
-          <div class="p-6">
-            <h4 class="text-xl font-semibold">Bombilla Acero Fino</h4>
-            <p class="mt-2 text-cream/75">Filtro eficiente, sorbo cómodo, cero vueltas.</p>
-            <div class="mt-5 flex items-center justify-between">
-              <p class="text-lg font-semibold">$ 11.990</p>
-              <button class="inline-flex items-center gap-2 rounded-xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                data-add data-name="Bombilla Acero Fino">
-                <i data-lucide="plus" class="h-5 w-5"></i> Agregar
+        </div>
+
+        <!-- Price range panel -->
+        <div id="pricePanel" class="hidden lg:col-span-12">
+          <div class="mt-2 grid gap-3 rounded-2xl bg-matte/25 p-4 ring-1 ring-cream/10 sm:grid-cols-3">
+            <div>
+              <label class="text-xs font-semibold tracking-widest text-cream/70">MÍNIMO</label>
+              <input id="minPrice" type="number" min="0" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" placeholder="0" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold tracking-widest text-cream/70">MÁXIMO</label>
+              <input id="maxPrice" type="number" min="0" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" placeholder="999999" />
+            </div>
+            <div class="flex items-end gap-2">
+              <button id="applyPrice" class="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-cream px-4 py-2.5 text-matte font-semibold hover:-translate-y-0.5 transition shadow-glow">
+                <i data-lucide="check" class="h-4 w-4"></i>
+                Aplicar
+              </button>
+              <button id="clearPrice" class="w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-cream/10 px-4 py-2.5 text-cream font-semibold ring-1 ring-cream/15 hover:bg-cream/15 transition">
+                <i data-lucide="x" class="h-4 w-4"></i>
+                Limpiar
               </button>
             </div>
           </div>
-        </article>
+        </div>
       </div>
 
-      <!-- Trust strip -->
-      <div class="mt-10 grid gap-4 rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 sm:grid-cols-3">
+      <!-- results header -->
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
-            <i data-lucide="shield-check" class="h-5 w-5"></i>
-          </div>
-          <div>
-            <p class="text-sm text-cream/75">Compra segura</p>
-            <p class="font-semibold">Protección & confianza</p>
-          </div>
+          <span class="inline-flex items-center gap-2 rounded-full bg-cream/10 px-4 py-2 text-sm ring-1 ring-cream/15">
+            <i data-lucide="sparkle" class="h-4 w-4"></i>
+            <span id="resultsCount">0</span> productos
+          </span>
+          <span id="activeFilters" class="text-sm text-cream/70"></span>
         </div>
-        <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
-            <i data-lucide="truck" class="h-5 w-5"></i>
-          </div>
-          <div>
-            <p class="text-sm text-cream/75">Envío premium</p>
-            <p class="font-semibold">A todo el país</p>
-          </div>
+        <div class="flex items-center gap-2 text-sm text-cream/70">
+          <i data-lucide="info" class="h-4 w-4"></i>
+          Tip: podés “Agregar” y cerrar pedido por WhatsApp desde el carrito.
         </div>
-        <div class="flex items-center gap-3">
-          <div class="grid h-10 w-10 place-items-center rounded-2xl bg-olive/20 ring-1 ring-olive/40">
-            <i data-lucide="badge-check" class="h-5 w-5"></i>
-          </div>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div id="productsGrid" class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <!-- SECCIONES POR CATEGORÍA (anclas) -->
+    <section class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 shadow-soft">
+        <div class="flex items-center justify-between gap-4 flex-wrap">
           <div>
-            <p class="text-sm text-cream/75">Calidad</p>
-            <p class="font-semibold">Materiales nobles</p>
+            <h3 class="text-2xl font-semibold">Secciones por categoría</h3>
+            <p class="mt-1 text-cream/75">Cada sección muestra productos de esa categoría (usando los mismos datos).</p>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button class="chip" data-jump="mates">Mates</button>
+            <button class="chip" data-jump="termos">Termos</button>
+            <button class="chip" data-jump="yerbas">Yerbas</button>
+            <button class="chip" data-jump="bombillas">Bombillas</button>
+            <button class="chip" data-jump="materas">Materas</button>
+            <button class="chip" data-jump="accesorios">Accesorios</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Sobre Nosotros -->
+    <section id="cat-mates" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Mates</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="mates"></div>
+    </section>
+
+    <section id="cat-termos" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Termos</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="termos"></div>
+    </section>
+
+    <section id="cat-yerbas" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Yerbas</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="yerbas"></div>
+    </section>
+
+    <section id="cat-bombillas" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Bombillas</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="bombillas"></div>
+    </section>
+
+    <section id="cat-materas" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Materas</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="materas"></div>
+    </section>
+
+    <section id="cat-accesorios" class="mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8">
+      <div class="sectionHead">
+        <h3 class="text-2xl font-semibold">Accesorios</h3>
+        <a href="#tienda" class="text-sm font-semibold text-cream/80 hover:text-cream transition inline-flex items-center gap-2">
+          Ir a filtros <i data-lucide="chevron-right" class="h-4 w-4"></i>
+        </a>
+      </div>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-cat-grid="accesorios"></div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
     <section id="nosotros" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="grid gap-10 lg:grid-cols-2 lg:items-center">
         <div class="rounded-3xl bg-cream/5 p-8 ring-1 ring-cream/10 shadow-soft">
@@ -501,51 +507,33 @@
             <i data-lucide="heart" class="h-4 w-4"></i>
             Sobre BIENAMARGOS
           </p>
-
           <h3 class="mt-6 text-3xl font-semibold tracking-tight">
             Pasión por el mate, <span class="text-cream/90">bien amargo.</span>
           </h3>
-
           <p class="mt-4 text-cream/75 leading-relaxed">
-            Creemos que el mate no es solo una bebida: es pausa, charla y carácter.
-            En BIENAMARGOS seleccionamos piezas premium con diseño sobrio y materiales que envejecen bien.
+            El mate es pausa, charla y carácter. Seleccionamos piezas premium con diseño sobrio y materiales que envejecen bien.
             Para quienes disfrutan el ritual sin azúcar, sin apuro y con estilo.
           </p>
-
-          <div class="mt-7 flex flex-wrap gap-3">
-            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
-              <i data-lucide="gem" class="h-4 w-4"></i> Premium
-            </span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
-              <i data-lucide="palette" class="h-4 w-4"></i> Diseño
-            </span>
-            <span class="inline-flex items-center gap-2 rounded-full bg-olive/15 px-4 py-2 text-sm ring-1 ring-olive/30">
-              <i data-lucide="sparkle" class="h-4 w-4"></i> Detalles
-            </span>
-          </div>
         </div>
 
         <div class="relative overflow-hidden rounded-3xl ring-1 ring-cream/10 shadow-soft">
           <img
             class="h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=2400&q=80"
-            alt="Mesa y ritual"
+            alt="Ritual"
           />
           <div class="absolute inset-0 bg-gradient-to-tr from-forest/85 via-forest/30 to-transparent"></div>
-
           <div class="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
             <div class="rounded-2xl bg-matte/55 p-5 ring-1 ring-cream/10 backdrop-blur">
               <p class="text-sm text-cream/75">Manifiesto</p>
-              <p class="mt-1 text-lg font-semibold">
-                “Amargo, como debe ser. Elegante, como te gusta.”
-              </p>
+              <p class="mt-1 text-lg font-semibold">“Amargo, como debe ser. Elegante, como te gusta.”</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer / Contacto -->
+    <!-- FOOTER -->
     <footer id="contacto" class="border-t border-cream/10 bg-forest/70">
       <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
         <div class="grid gap-10 lg:grid-cols-12">
@@ -560,20 +548,16 @@
               </div>
             </div>
             <p class="mt-4 text-cream/75 max-w-md">
-              Mates, termos y accesorios premium para un ritual auténtico. Diseño sobrio, calidad real.
+              Mates, termos y accesorios premium. Comprá rápido y finalizá el pedido por WhatsApp.
             </p>
-
             <div class="mt-6 flex items-center gap-3">
-              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
-                href="#" aria-label="Instagram">
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition" href="#" aria-label="Instagram">
                 <i data-lucide="instagram" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
               </a>
-              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
-                href="#" aria-label="TikTok">
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition" href="#" aria-label="TikTok">
                 <i data-lucide="music-2" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
               </a>
-              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition"
-                href="#" aria-label="WhatsApp">
+              <a class="group inline-flex h-11 w-11 items-center justify-center rounded-xl bg-cream/10 ring-1 ring-cream/15 hover:bg-cream/15 transition" href="#" aria-label="WhatsApp">
                 <i data-lucide="message-circle" class="h-5 w-5 group-hover:scale-110 transition-transform"></i>
               </a>
             </div>
@@ -582,10 +566,10 @@
           <div class="lg:col-span-3">
             <h4 class="text-sm font-semibold tracking-widest text-cream/90">LINKS</h4>
             <ul class="mt-4 space-y-2 text-cream/75">
-              <li><a class="hover:text-cream transition" href="#inicio">Inicio</a></li>
+              <li><a class="hover:text-cream transition" href="#tienda">Tienda</a></li>
               <li><a class="hover:text-cream transition" href="#categorias">Categorías</a></li>
-              <li><a class="hover:text-cream transition" href="#destacados">Destacados</a></li>
               <li><a class="hover:text-cream transition" href="#nosotros">Nosotros</a></li>
+              <li><a class="hover:text-cream transition" href="#contacto">Contacto</a></li>
             </ul>
           </div>
 
@@ -611,25 +595,13 @@
 
               <div>
                 <h4 class="text-sm font-semibold tracking-widest text-cream/90">NEWSLETTER</h4>
-                <p class="mt-4 text-cream/75">
-                  Promos, lanzamientos y tips para un amargo perfecto.
-                </p>
-
+                <p class="mt-4 text-cream/75">Promos, lanzamientos y tips para un amargo perfecto.</p>
                 <form class="mt-4 flex flex-col gap-3 sm:flex-row" onsubmit="event.preventDefault(); toast('¡Listo! Te suscribiste al newsletter.');">
-                  <label class="sr-only" for="email">Email</label>
-                  <input
-                    id="email"
-                    type="email"
-                    required
-                    placeholder="Tu email"
-                    class="w-full rounded-xl bg-cream/10 px-4 py-3 text-cream placeholder:text-cream/50 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60"
-                  />
-                  <button
-                    type="submit"
-                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow"
-                  >
-                    Suscribirme
-                    <i data-lucide="send" class="h-5 w-5"></i>
+                  <input id="email" type="email" required placeholder="Tu email"
+                    class="w-full rounded-xl bg-cream/10 px-4 py-3 text-cream placeholder:text-cream/50 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" />
+                  <button type="submit"
+                    class="inline-flex items-center justify-center gap-2 rounded-xl bg-cream px-5 py-3 text-matte font-semibold hover:-translate-y-0.5 transition-all shadow-glow">
+                    Suscribirme <i data-lucide="send" class="h-5 w-5"></i>
                   </button>
                 </form>
               </div>
@@ -648,84 +620,647 @@
     </footer>
   </main>
 
+  <!-- CART DRAWER -->
+  <div id="cartOverlay" class="fixed inset-0 z-[70] hidden bg-black/55 backdrop-blur-sm"></div>
+  <aside id="cartDrawer" class="fixed right-0 top-0 z-[80] h-full w-full max-w-md translate-x-full bg-matte/92 ring-1 ring-cream/10 backdrop-blur transition-transform">
+    <div class="flex h-full flex-col">
+      <div class="flex items-center justify-between border-b border-cream/10 px-5 py-4">
+        <div class="flex items-center gap-3">
+          <div class="grid h-10 w-10 place-items-center rounded-xl bg-cream/10 ring-1 ring-cream/15">
+            <i data-lucide="shopping-bag" class="h-5 w-5"></i>
+          </div>
+          <div>
+            <p class="text-sm text-cream/70">Tu carrito</p>
+            <p class="font-semibold"><span id="cartItemsCount">0</span> items</p>
+          </div>
+        </div>
+        <button id="closeCart" class="rounded-xl bg-cream/10 p-2 ring-1 ring-cream/15 hover:bg-cream/15 transition" aria-label="Cerrar">
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-auto px-5 py-4">
+        <div id="cartEmpty" class="hidden rounded-3xl bg-cream/5 p-6 ring-1 ring-cream/10 text-center">
+          <i data-lucide="shopping-bag" class="mx-auto h-8 w-8 text-cream/80"></i>
+          <p class="mt-3 font-semibold">Tu carrito está vacío</p>
+          <p class="mt-1 text-sm text-cream/70">Agregá productos y finalizá por WhatsApp.</p>
+        </div>
+        <div id="cartList" class="space-y-3"></div>
+
+        <!-- Shipping + customer -->
+        <div class="mt-6 rounded-3xl bg-cream/5 p-5 ring-1 ring-cream/10">
+          <h4 class="text-sm font-semibold tracking-widest text-cream/90">ENVÍO</h4>
+          <div class="mt-3 grid gap-2">
+            <label class="flex items-center justify-between rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15">
+              <span class="text-sm text-cream/85">Retiro en punto</span>
+              <span class="text-sm font-semibold">$ 0</span>
+              <input type="radio" name="shipping" value="pickup" class="ml-3 accent-[#6b7a3a]" checked />
+            </label>
+            <label class="flex items-center justify-between rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15">
+              <span class="text-sm text-cream/85">Envío CABA/GBA</span>
+              <span class="text-sm font-semibold">$ <span data-ship="caba">3500</span></span>
+              <input type="radio" name="shipping" value="caba" class="ml-3 accent-[#6b7a3a]" />
+            </label>
+            <label class="flex items-center justify-between rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15">
+              <span class="text-sm text-cream/85">Envío Interior</span>
+              <span class="text-sm font-semibold">$ <span data-ship="interior">6500</span></span>
+              <input type="radio" name="shipping" value="interior" class="ml-3 accent-[#6b7a3a]" />
+            </label>
+          </div>
+
+          <div class="mt-5 grid gap-3">
+            <div>
+              <label class="text-xs font-semibold tracking-widest text-cream/70">NOMBRE</label>
+              <input id="custName" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold tracking-widest text-cream/70">ZONA / DIRECCIÓN</label>
+              <input id="custAddr" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" placeholder="Ej: Palermo, CABA / Calle 123" />
+            </div>
+            <div>
+              <label class="text-xs font-semibold tracking-widest text-cream/70">NOTAS</label>
+              <textarea id="custNotes" rows="2" class="mt-2 w-full rounded-2xl bg-cream/10 px-3 py-2 ring-1 ring-cream/15 focus:outline-none focus:ring-2 focus:ring-olive/60" placeholder="Color, modelo, horario, etc."></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-cream/10 px-5 py-4">
+        <div class="flex items-center justify-between">
+          <p class="text-sm text-cream/70">Subtotal</p>
+          <p class="font-semibold">$ <span id="cartSubtotal">0</span></p>
+        </div>
+        <div class="mt-1 flex items-center justify-between">
+          <p class="text-sm text-cream/70">Envío</p>
+          <p class="font-semibold">$ <span id="cartShipping">0</span></p>
+        </div>
+        <div class="mt-3 flex items-center justify-between">
+          <p class="text-sm text-cream/70">Total</p>
+          <p class="text-xl font-semibold">$ <span id="cartTotal">0</span></p>
+        </div>
+
+        <div class="mt-4 grid gap-2">
+          <button id="checkoutWpp" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-cream px-4 py-3 text-matte font-semibold hover:-translate-y-0.5 transition shadow-glow">
+            <i data-lucide="message-circle" class="h-5 w-5"></i>
+            Finalizar por WhatsApp
+          </button>
+          <button id="clearCart" class="inline-flex items-center justify-center gap-2 rounded-2xl bg-cream/10 px-4 py-3 text-cream font-semibold ring-1 ring-cream/15 hover:bg-cream/15 transition">
+            <i data-lucide="trash-2" class="h-5 w-5"></i>
+            Vaciar carrito
+          </button>
+        </div>
+
+        <p class="mt-3 text-xs text-cream/55">
+          Al finalizar, se abre WhatsApp con el mensaje armado. Podés cambiar precios/envíos desde el JS.
+        </p>
+      </div>
+    </div>
+  </aside>
+
   <!-- Toast -->
   <div id="toast"
-    class="fixed bottom-5 left-1/2 z-[60] hidden -translate-x-1/2 rounded-2xl bg-matte/70 px-5 py-3 text-cream ring-1 ring-cream/10 backdrop-blur shadow-soft">
+    class="fixed bottom-5 left-1/2 z-[90] hidden -translate-x-1/2 rounded-2xl bg-matte/70 px-5 py-3 text-cream ring-1 ring-cream/10 backdrop-blur shadow-soft">
     <div class="flex items-center gap-3">
       <i data-lucide="check-circle-2" class="h-5 w-5 text-cream"></i>
       <p id="toastText" class="text-sm font-medium">Listo</p>
     </div>
   </div>
 
+  <style>
+    .sectionHead { display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    .chip { border-radius: 999px; padding: 8px 14px; font-weight: 700; font-size: 12px; letter-spacing: .08em;
+      background: rgba(244,240,230,.08); border: 1px solid rgba(244,240,230,.15); color: rgba(244,240,230,.9);
+      transition: .2s ease; }
+    .chip:hover { background: rgba(244,240,230,.12); transform: translateY(-1px); }
+    @keyframes fadeIn { from { opacity: 0; transform: translate(-50%, 6px);} to { opacity: 1; transform: translate(-50%, 0);} }
+  </style>
+
   <script>
-    // Init icons
+    // ====== CONFIG ======
+    // Cambiá este número por el de tu tienda (formato internacional sin +):
+    // Argentina: 54911XXXXXXXX
+    const WHATSAPP_PHONE = "5491100000000";
+
+    const SHIPPING_PRICES = {
+      pickup: 0,
+      caba: 3500,
+      interior: 6500
+    };
+
+    // ====== DATA (productos) ======
+    // Podés reemplazar esto por tu data real (luego lo conectamos a backend / Google Sheet / etc.)
+    const PRODUCTS = [
+      // Sets
+      { id:"set-esmeralda", name:"Set Esmeralda", category:"accesorios", price:69990, stock:12, featured:true, tags:["premium","set"], img:"https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=80", desc:"Mate + bombilla premium + matera minimal." },
+
+      // Mates
+      { id:"mate-imperial-bosque", name:"Mate Imperial Bosque", category:"mates", price:34990, stock:8, featured:true, tags:["imperial","cuero"], img:"https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1400&q=80", desc:"Acabado sobrio y agarre perfecto." },
+      { id:"mate-acero-oliva", name:"Mate Acero Oliva", category:"mates", price:27990, stock:16, featured:false, tags:["acero","minimal"], img:"https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=1400&q=80", desc:"Doble pared, diseño moderno." },
+      { id:"mate-ceramica-esmeralda", name:"Mate Cerámica Esmeralda", category:"mates", price:23990, stock:0, featured:false, tags:["ceramica","diseño"], img:"https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?auto=format&fit=crop&w=1400&q=80", desc:"Textura premium, tacto suave." },
+
+      // Termos
+      { id:"termo-esmeralda-1l", name:"Termo Esmeralda 1L", category:"termos", price:59990, stock:10, featured:true, tags:["1L","pico"], img:"https://images.unsplash.com/photo-1520975958225-bc2d3bbf5c6a?auto=format&fit=crop&w=1400&q=80", desc:"Mantiene temperatura por horas." },
+      { id:"termo-bosque-750", name:"Termo Bosque 750ml", category:"termos", price:48990, stock:6, featured:false, tags:["750ml","compacto"], img:"https://images.unsplash.com/photo-1526401485004-2aa7b5f8f7f3?auto=format&fit=crop&w=1400&q=80", desc:"Ideal para matera liviana." },
+
+      // Yerbas
+      { id:"yerba-seleccion-amarga", name:"Yerba Selección Amarga", category:"yerbas", price:7990, stock:22, featured:true, tags:["intensa","clasica"], img:"https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=1400&q=80", desc:"Perfil robusto y duradero." },
+      { id:"yerba-oliva-suave", name:"Yerba Oliva Suave", category:"yerbas", price:6990, stock:18, featured:false, tags:["suave","blend"], img:"https://images.unsplash.com/photo-1516054575922-f0b8eeadec1a?auto=format&fit=crop&w=1400&q=80", desc:"Equilibrada, ideal para todos los días." },
+
+      // Bombillas
+      { id:"bombilla-acero-fino", name:"Bombilla Acero Fino", category:"bombillas", price:11990, stock:15, featured:true, tags:["acero","pico fino"], img:"https://images.unsplash.com/photo-1520975693411-cd51f4ddf5c6?auto=format&fit=crop&w=1400&q=80", desc:"Filtro eficiente, sorbo cómodo." },
+      { id:"bombilla-pico-curvo", name:"Bombilla Pico Curvo", category:"bombillas", price:13990, stock:9, featured:false, tags:["curva","filtro"], img:"https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=1400&q=80", desc:"Ergonomía premium." },
+
+      // Materas
+      { id:"matera-cuero-bosque", name:"Matera Cuero Bosque", category:"materas", price:74990, stock:4, featured:false, tags:["cuero","premium"], img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1400&q=80", desc:"Cuero premium y costuras reforzadas." },
+      { id:"matera-minimal-lona", name:"Matera Minimal Lona", category:"materas", price:52990, stock:7, featured:true, tags:["lona","minimal"], img:"https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1400&q=80", desc:"Liviana, resistente, estética sobria." },
+
+      // Accesorios
+      { id:"cepillo-bombilla", name:"Cepillo para Bombilla", category:"accesorios", price:3990, stock:30, featured:false, tags:["limpieza"], img:"https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1400&q=80", desc:"Mantenimiento simple y rápido." },
+      { id:"tapa-termo-silicon", name:"Tapa Silicona Termo", category:"accesorios", price:2990, stock:25, featured:false, tags:["repuesto"], img:"https://images.unsplash.com/photo-1525904097878-94fb15835963?auto=format&fit=crop&w=1400&q=80", desc:"Evita pérdidas, ajuste perfecto." },
+    ];
+
+    // ====== HELPERS ======
+    const $ = (s, el=document) => el.querySelector(s);
+    const $$ = (s, el=document) => Array.from(el.querySelectorAll(s));
+    const money = (n) => new Intl.NumberFormat("es-AR").format(n);
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+    // ====== ICONS ======
     lucide.createIcons();
 
-    // Mobile menu toggle
-    const mobileBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    mobileBtn?.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
+    // ====== NAV: mobile menu ======
+    const mobileBtn = $("#mobileMenuBtn");
+    const mobileMenu = $("#mobileMenu");
+    mobileBtn?.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+    $$("#mobileMenu a").forEach(a => a.addEventListener("click", () => mobileMenu.classList.add("hidden")));
+
+    // ====== YEAR ======
+    $("#year").textContent = new Date().getFullYear();
+
+    // ====== UI: price panel ======
+    const priceBtn = $("#priceBtn");
+    const pricePanel = $("#pricePanel");
+    priceBtn.addEventListener("click", () => {
+      pricePanel.classList.toggle("hidden");
+      lucide.createIcons();
     });
-    // close menu on link click
-    mobileMenu?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileMenu.classList.add('hidden')));
 
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    // ====== FILTER STATE ======
+    const state = {
+      q: "",
+      cat: "all",
+      sort: "featured",
+      inStockOnly: false,
+      minPrice: null,
+      maxPrice: null
+    };
 
-    // Simple cart counter (UI demo)
-    let cart = 0;
-    const cartCount = document.getElementById('cartCount');
-    document.querySelectorAll('[data-add]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        cart++;
-        cartCount.textContent = String(cart);
-        const name = btn.getAttribute('data-name') || 'Producto';
-        toast(`Agregado: ${name} (x${cart})`);
+    // ====== CART (localStorage) ======
+    const CART_KEY = "bienamargos_cart_v1";
+    let cart = loadCart(); // { [id]: {id, qty} }
+
+    function loadCart() {
+      try {
+        const raw = localStorage.getItem(CART_KEY);
+        if (!raw) return {};
+        const obj = JSON.parse(raw);
+        return (obj && typeof obj === "object") ? obj : {};
+      } catch { return {}; }
+    }
+    function saveCart() {
+      localStorage.setItem(CART_KEY, JSON.stringify(cart));
+    }
+
+    function cartQtyTotal() {
+      return Object.values(cart).reduce((acc, it) => acc + (it.qty || 0), 0);
+    }
+    function cartSubtotal() {
+      return Object.values(cart).reduce((acc, it) => {
+        const p = PRODUCTS.find(x => x.id === it.id);
+        if (!p) return acc;
+        return acc + p.price * it.qty;
+      }, 0);
+    }
+
+    function addToCart(id, qty=1) {
+      const p = PRODUCTS.find(x => x.id === id);
+      if (!p) return;
+      if (p.stock <= 0) {
+        toast("Sin stock por ahora 😅");
+        return;
+      }
+      if (!cart[id]) cart[id] = { id, qty: 0 };
+      cart[id].qty = clamp(cart[id].qty + qty, 1, 99);
+      saveCart();
+      updateCartUI();
+      toast(`Agregado: ${p.name}`);
+    }
+
+    function setQty(id, qty) {
+      qty = Number(qty || 0);
+      if (qty <= 0) {
+        delete cart[id];
+      } else {
+        if (!cart[id]) cart[id] = { id, qty: 1 };
+        cart[id].qty = clamp(qty, 1, 99);
+      }
+      saveCart();
+      updateCartUI();
+    }
+
+    function removeItem(id) {
+      delete cart[id];
+      saveCart();
+      updateCartUI();
+    }
+
+    function clearCart() {
+      cart = {};
+      saveCart();
+      updateCartUI();
+      toast("Carrito vaciado");
+    }
+
+    // ====== CART DRAWER UI ======
+    const cartBtn = $("#cartBtn");
+    const cartOverlay = $("#cartOverlay");
+    const cartDrawer = $("#cartDrawer");
+    const closeCart = $("#closeCart");
+
+    function openCart() {
+      cartOverlay.classList.remove("hidden");
+      cartDrawer.classList.remove("translate-x-full");
+      document.body.style.overflow = "hidden";
+    }
+    function closeCartDrawer() {
+      cartOverlay.classList.add("hidden");
+      cartDrawer.classList.add("translate-x-full");
+      document.body.style.overflow = "";
+    }
+    cartBtn.addEventListener("click", openCart);
+    closeCart.addEventListener("click", closeCartDrawer);
+    cartOverlay.addEventListener("click", closeCartDrawer);
+
+    // ====== RENDER: product cards ======
+    function productCard(p) {
+      const stockBadge = p.stock > 0
+        ? `<span class="absolute left-4 top-4 rounded-full bg-olive/25 px-3 py-1 text-xs font-bold ring-1 ring-olive/40">STOCK</span>`
+        : `<span class="absolute left-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">SIN STOCK</span>`;
+
+      const featuredBadge = p.featured
+        ? `<span class="absolute right-4 top-4 rounded-full bg-cream/10 px-3 py-1 text-xs font-bold ring-1 ring-cream/15">TOP</span>`
+        : "";
+
+      const tags = (p.tags || []).slice(0,3).map(t => `
+        <span class="rounded-full bg-cream/10 px-3 py-1 text-[11px] font-bold tracking-widest ring-1 ring-cream/15 text-cream/85">${escapeHtml(t)}</span>
+      `).join("");
+
+      return `
+        <article class="rounded-3xl bg-cream/5 ring-1 ring-cream/10 shadow-soft overflow-hidden hover:ring-cream/20 transition-all">
+          <div class="relative h-48">
+            <img class="h-full w-full object-cover" src="${p.img}" alt="${escapeHtml(p.name)}" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/85 via-transparent to-transparent"></div>
+            ${stockBadge}
+            ${featuredBadge}
+          </div>
+          <div class="p-6">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-xs text-cream/70 tracking-widest font-semibold">${labelCat(p.category)}</p>
+                <h4 class="mt-1 text-xl font-semibold">${escapeHtml(p.name)}</h4>
+              </div>
+              <div class="text-right">
+                <p class="text-xs text-cream/70">Precio</p>
+                <p class="text-lg font-semibold">$ ${money(p.price)}</p>
+              </div>
+            </div>
+
+            <p class="mt-2 text-cream/75">${escapeHtml(p.desc || "")}</p>
+
+            <div class="mt-4 flex flex-wrap gap-2">${tags}</div>
+
+            <div class="mt-5 flex items-center justify-between gap-3">
+              <button
+                class="inline-flex items-center gap-2 rounded-xl bg-cream/10 px-4 py-2.5 text-sm font-semibold ring-1 ring-cream/15 hover:bg-cream/15 hover:-translate-y-0.5 transition-all"
+                onclick="jumpToCategory('${p.category}')"
+                type="button"
+              >
+                <i data-lucide="layers" class="h-4 w-4"></i> Ver sección
+              </button>
+
+              <button
+                class="${p.stock>0 ? "bg-cream text-matte hover:-translate-y-0.5 shadow-glow" : "bg-cream/10 text-cream/50 cursor-not-allowed"} inline-flex items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-all ring-1 ring-cream/15"
+                ${p.stock>0 ? `onclick="addToCart('${p.id}',1)"` : ""}
+                type="button"
+              >
+                <i data-lucide="${p.stock>0 ? "plus" : "ban"}" class="h-4 w-4"></i>
+                ${p.stock>0 ? "Agregar" : "Sin stock"}
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    // Expose functions used in inline onclick
+    window.addToCart = addToCart;
+    window.jumpToCategory = (cat) => {
+      const map = {
+        mates: "#cat-mates",
+        termos: "#cat-termos",
+        yerbas: "#cat-yerbas",
+        bombillas: "#cat-bombillas",
+        materas: "#cat-materas",
+        accesorios: "#cat-accesorios"
+      };
+      location.hash = map[cat] || "#tienda";
+    };
+
+    function labelCat(cat) {
+      return ({
+        mates:"MATES",
+        termos:"TERMOS",
+        yerbas:"YERBAS",
+        bombillas:"BOMBILLAS",
+        materas:"MATERAS",
+        accesorios:"ACCESORIOS"
+      })[cat] || "PRODUCTO";
+    }
+
+    function escapeHtml(str) {
+      return String(str).replace(/[&<>"']/g, m => ({
+        "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"
+      }[m]));
+    }
+
+    // ====== FILTER + RENDER STORE ======
+    function applyFilters(list) {
+      let out = [...list];
+
+      const q = state.q.trim().toLowerCase();
+      if (q) {
+        out = out.filter(p => (p.name + " " + (p.desc||"") + " " + (p.tags||[]).join(" "))
+          .toLowerCase()
+          .includes(q)
+        );
+      }
+
+      if (state.cat !== "all") out = out.filter(p => p.category === state.cat);
+      if (state.inStockOnly) out = out.filter(p => p.stock > 0);
+
+      if (state.minPrice != null && state.minPrice !== "") out = out.filter(p => p.price >= Number(state.minPrice));
+      if (state.maxPrice != null && state.maxPrice !== "") out = out.filter(p => p.price <= Number(state.maxPrice));
+
+      switch (state.sort) {
+        case "price-asc": out.sort((a,b)=>a.price-b.price); break;
+        case "price-desc": out.sort((a,b)=>b.price-a.price); break;
+        case "name-asc": out.sort((a,b)=>a.name.localeCompare(b.name)); break;
+        case "featured":
+        default:
+          out.sort((a,b) => (b.featured - a.featured) || (b.stock - a.stock) || (a.price - b.price));
+          break;
+      }
+      return out;
+    }
+
+    function renderStore() {
+      const grid = $("#productsGrid");
+      const filtered = applyFilters(PRODUCTS);
+      grid.innerHTML = filtered.map(productCard).join("");
+
+      $("#resultsCount").textContent = filtered.length;
+
+      const tags = [];
+      if (state.q) tags.push(`Buscar: "${state.q}"`);
+      if (state.cat !== "all") tags.push(`Cat: ${labelCat(state.cat)}`);
+      if (state.inStockOnly) tags.push("Solo stock");
+      if (state.minPrice != null || state.maxPrice != null) {
+        const a = state.minPrice ?? "";
+        const b = state.maxPrice ?? "";
+        if (a || b) tags.push(`Precio: ${a || "0"}–${b || "∞"}`);
+      }
+      $("#activeFilters").textContent = tags.length ? "• " + tags.join(" • ") : "";
+
+      lucide.createIcons();
+    }
+
+    // ====== RENDER CATEGORY SECTIONS ======
+    function renderCategorySections() {
+      const byCat = (cat) => PRODUCTS.filter(p => p.category === cat).sort((a,b)=> (b.featured-a.featured) || (a.price-b.price));
+      $$("[data-cat-grid]").forEach(el => {
+        const cat = el.getAttribute("data-cat-grid");
+        const items = byCat(cat).slice(0, 6); // muestra hasta 6 por sección
+        el.innerHTML = items.map(productCard).join("");
+      });
+      lucide.createIcons();
+    }
+
+    // ====== FILTER EVENTS ======
+    $("#qInput").addEventListener("input", (e)=>{ state.q = e.target.value; renderStore(); });
+    $("#catSelect").addEventListener("change", (e)=>{ state.cat = e.target.value; renderStore(); });
+    $("#sortSelect").addEventListener("change", (e)=>{ state.sort = e.target.value; renderStore(); });
+    $("#inStockOnly").addEventListener("change", (e)=>{ state.inStockOnly = e.target.checked; renderStore(); });
+
+    $("#applyPrice").addEventListener("click", ()=>{
+      state.minPrice = $("#minPrice").value ? Number($("#minPrice").value) : null;
+      state.maxPrice = $("#maxPrice").value ? Number($("#maxPrice").value) : null;
+      renderStore();
+      toast("Rango aplicado");
+    });
+
+    $("#clearPrice").addEventListener("click", ()=>{
+      $("#minPrice").value = "";
+      $("#maxPrice").value = "";
+      state.minPrice = null;
+      state.maxPrice = null;
+      renderStore();
+      toast("Rango limpiado");
+    });
+
+    $("#resetFiltersBtn").addEventListener("click", ()=>{
+      state.q = ""; state.cat="all"; state.sort="featured"; state.inStockOnly=false; state.minPrice=null; state.maxPrice=null;
+      $("#qInput").value = "";
+      $("#catSelect").value = "all";
+      $("#sortSelect").value = "featured";
+      $("#inStockOnly").checked = false;
+      $("#minPrice").value = "";
+      $("#maxPrice").value = "";
+      renderStore();
+      toast("Filtros reseteados");
+    });
+
+    // Jump chips
+    $$(".chip").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const cat = btn.getAttribute("data-jump");
+        const map = {
+          mates:"#cat-mates", termos:"#cat-termos", yerbas:"#cat-yerbas",
+          bombillas:"#cat-bombillas", materas:"#cat-materas", accesorios:"#cat-accesorios"
+        };
+        location.hash = map[cat] || "#tienda";
       });
     });
 
-    // Carousel scroll controls
-    const carousel = document.getElementById('carousel');
-    const nextBtn = document.getElementById('nextBtn');
-    const prevBtn = document.getElementById('prevBtn');
-    const scrollBy = () => Math.min(420, Math.max(320, Math.floor(window.innerWidth * 0.65)));
+    // Hero "set" add
+    $$("[data-add-id]").forEach(btn => btn.addEventListener("click", ()=> addToCart(btn.getAttribute("data-add-id"), 1)));
 
-    nextBtn?.addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollBy(), behavior: 'smooth' });
-    });
-    prevBtn?.addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollBy(), behavior: 'smooth' });
+    // ====== CART UI UPDATE ======
+    function updateCartUI() {
+      const qtyTotal = cartQtyTotal();
+      $("#cartCount").textContent = String(qtyTotal);
+      $("#cartItemsCount").textContent = String(qtyTotal);
+
+      const list = $("#cartList");
+      const empty = $("#cartEmpty");
+
+      const items = Object.values(cart)
+        .map(it => {
+          const p = PRODUCTS.find(x => x.id === it.id);
+          if (!p) return null;
+          return { ...p, qty: it.qty };
+        })
+        .filter(Boolean);
+
+      if (items.length === 0) {
+        empty.classList.remove("hidden");
+        list.innerHTML = "";
+      } else {
+        empty.classList.add("hidden");
+        list.innerHTML = items.map(p => `
+          <div class="rounded-3xl bg-cream/5 p-4 ring-1 ring-cream/10">
+            <div class="flex gap-3">
+              <img src="${p.img}" alt="${escapeHtml(p.name)}" class="h-16 w-16 rounded-2xl object-cover ring-1 ring-cream/10" />
+              <div class="flex-1">
+                <div class="flex items-start justify-between gap-2">
+                  <div>
+                    <p class="text-xs text-cream/70 font-semibold tracking-widest">${labelCat(p.category)}</p>
+                    <p class="font-semibold">${escapeHtml(p.name)}</p>
+                    <p class="mt-0.5 text-sm text-cream/70">$ ${money(p.price)} c/u</p>
+                  </div>
+                  <button class="rounded-xl bg-cream/10 p-2 ring-1 ring-cream/15 hover:bg-cream/15 transition"
+                    onclick="removeItem('${p.id}')" aria-label="Eliminar">
+                    <i data-lucide="trash-2" class="h-4 w-4"></i>
+                  </button>
+                </div>
+
+                <div class="mt-3 flex items-center justify-between">
+                  <div class="inline-flex items-center gap-2 rounded-2xl bg-cream/10 px-2 py-1 ring-1 ring-cream/15">
+                    <button class="p-2 hover:bg-cream/10 rounded-xl transition" onclick="setQty('${p.id}', ${p.qty}-1)" aria-label="Restar">
+                      <i data-lucide="minus" class="h-4 w-4"></i>
+                    </button>
+                    <span class="min-w-[26px] text-center text-sm font-semibold">${p.qty}</span>
+                    <button class="p-2 hover:bg-cream/10 rounded-xl transition" onclick="setQty('${p.id}', ${p.qty}+1)" aria-label="Sumar">
+                      <i data-lucide="plus" class="h-4 w-4"></i>
+                    </button>
+                  </div>
+
+                  <p class="font-semibold">$ ${money(p.price * p.qty)}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      // Shipping
+      const ship = getSelectedShipping();
+      const sub = cartSubtotal();
+      const total = sub + ship;
+      $("#cartSubtotal").textContent = money(sub);
+      $("#cartShipping").textContent = money(ship);
+      $("#cartTotal").textContent = money(total);
+
+      lucide.createIcons();
+    }
+
+    // expose functions used inline
+    window.setQty = setQty;
+    window.removeItem = removeItem;
+
+    function getSelectedShipping() {
+      const val = ($('input[name="shipping"]:checked') || {}).value || "pickup";
+      return SHIPPING_PRICES[val] ?? 0;
+    }
+
+    $$('input[name="shipping"]').forEach(r => r.addEventListener("change", updateCartUI));
+    $("#clearCart").addEventListener("click", clearCart);
+
+    // ====== WHATSAPP CHECKOUT ======
+    function buildWhatsappMessage() {
+      const items = Object.values(cart).map(it => {
+        const p = PRODUCTS.find(x => x.id === it.id);
+        if (!p) return null;
+        return { ...p, qty: it.qty };
+      }).filter(Boolean);
+
+      const sub = cartSubtotal();
+      const shipVal = ($('input[name="shipping"]:checked') || {}).value || "pickup";
+      const ship = SHIPPING_PRICES[shipVal] ?? 0;
+      const total = sub + ship;
+
+      const name = ($("#custName").value || "").trim();
+      const addr = ($("#custAddr").value || "").trim();
+      const notes = ($("#custNotes").value || "").trim();
+
+      const shipLabel = shipVal === "pickup" ? "Retiro en punto" : (shipVal === "caba" ? "Envío CABA/GBA" : "Envío Interior");
+
+      const lines = [];
+      lines.push("BIENAMARGOS — Pedido");
+      lines.push("——————————————");
+      items.forEach(p => {
+        lines.push(`• ${p.name} x${p.qty} — $${money(p.price * p.qty)}`);
+      });
+      lines.push("——————————————");
+      lines.push(`Subtotal: $${money(sub)}`);
+      lines.push(`${shipLabel}: $${money(ship)}`);
+      lines.push(`TOTAL: $${money(total)}`);
+      lines.push("");
+
+      if (name) lines.push(`Nombre: ${name}`);
+      if (addr) lines.push(`Zona/Dirección: ${addr}`);
+      if (notes) lines.push(`Notas: ${notes}`);
+
+      if (!name || !addr) {
+        lines.push("");
+        lines.push("(Completá nombre y zona/dirección para coordinar entrega)");
+      }
+
+      return lines.join("\n");
+    }
+
+    $("#checkoutWpp").addEventListener("click", () => {
+      const itemsCount = cartQtyTotal();
+      if (itemsCount === 0) {
+        toast("Agregá productos antes de finalizar");
+        return;
+      }
+      const msg = buildWhatsappMessage();
+      const url = `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
     });
 
-    // Cart click (demo)
-    document.getElementById('cartBtn')?.addEventListener('click', () => {
-      toast(`Carrito: ${cart} item${cart === 1 ? '' : 's'}`);
-    });
-
-    // Toast helper
+    // ====== TOAST ======
     let toastTimer = null;
     function toast(message) {
-      const el = document.getElementById('toast');
-      const text = document.getElementById('toastText');
+      const el = $("#toast");
+      const text = $("#toastText");
       text.textContent = message;
-      el.classList.remove('hidden');
-      el.classList.add('animate-[fadeIn_.18s_ease-out]');
+      el.classList.remove("hidden");
+      el.classList.add("animate-[fadeIn_.18s_ease-out]");
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => {
-        el.classList.add('hidden');
-        el.classList.remove('animate-[fadeIn_.18s_ease-out]');
+        el.classList.add("hidden");
+        el.classList.remove("animate-[fadeIn_.18s_ease-out]");
       }, 2200);
     }
-  </script>
 
-  <!-- Tiny animation keyframes (Tailwind doesn't ship custom keyframes via CDN by default) -->
-  <style>
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translate(-50%, 6px); }
-      to   { opacity: 1; transform: translate(-50%, 0); }
-    }
-  </style>
+    // ====== INIT ======
+    renderStore();
+    renderCategorySections();
+    updateCartUI();
+
+    // optional: open cart if hash is #cart
+    if (location.hash === "#cart") openCart();
+  </script>
 </body>
 </html>
-```
